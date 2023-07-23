@@ -20,6 +20,7 @@ const SignUp = () => {
               id="name"
               className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-teal-500 bg-gray-200 text-gray-900"
               placeholder="Enter Your Name"
+              required
             />
           </div>
           <div className="mb-3">
@@ -33,6 +34,7 @@ const SignUp = () => {
               id="image"
               accept="image/*"
               className="mt-2 cursor-pointer w-full"
+              required
             />
           </div>
           <div className="mb-3">
@@ -45,6 +47,7 @@ const SignUp = () => {
               id="email"
               className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-teal-500 bg-gray-200 text-gray-900"
               placeholder="Enter Your Email"
+              required
             />
           </div>
           <div className="mb-3">
@@ -57,6 +60,7 @@ const SignUp = () => {
               id="password"
               className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-teal-500 bg-gray-200 text-gray-900"
               placeholder="Enter Your Password"
+              required
             />
           </div>
           <div className="mt-3">
