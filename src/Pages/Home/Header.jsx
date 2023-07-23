@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { Container } from "../../Components/Shared/Container";
 
 const Header = () => {

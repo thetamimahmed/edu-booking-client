@@ -6,7 +6,6 @@ import { BsArrowBarDown } from "react-icons/bs";
 const Colleges = () => {
   const college = useLoaderData();
   const {
-    _id,
     college_image,
     college_name,
     admission_dates,

@@ -3,7 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import CollegeCard from "./CollegeCard";
 
 const CollegeSection = () => {
-  const colleges = useLoaderData();
+  const data = useLoaderData();
+  const colleges = data.slice(0, 3)
 
   return (
     <Container>
@@ -22,7 +23,7 @@ const CollegeSection = () => {
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {colleges.slice(0, 3).map((college) => (
+          {colleges.map((college) => (
             <CollegeCard key={college._id} college={college}></CollegeCard>
           ))}
         </div>
