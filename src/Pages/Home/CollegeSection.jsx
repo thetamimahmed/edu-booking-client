@@ -1,5 +1,5 @@
 import { Container } from "../../Components/Shared/Container";
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import CollegeCard from "./CollegeCard";
 
 const CollegeSection = () => {

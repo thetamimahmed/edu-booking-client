@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const CollegeCard = ({ college }) => {
   const {
+    _id,
     college_image,
     college_name,
     admission_dates,
@@ -23,33 +26,33 @@ const CollegeCard = ({ college }) => {
         </p>
         <div className="flex justify-evenly items-center">
           <div className="pr-2">
-            <table className="table">
+            <table className="">
               {/* head */}
               <thead>
                 <tr>
-                  <p className="text-lg text-teal-500 font-semibold">Events</p>
+                  <td className="text-lg text-teal-500 font-semibold">Events</td>
                 </tr>
               </thead>
               <tbody>
                 {/* row 1 */}
                 {events.map((event) => (
-                  <tr key={event}>{event}</tr>
+                  <tr key={event}><td>{event}</td></tr>
                 ))}
               </tbody>
             </table>
           </div>
           <div className="">
-            <table className="table">
+            <table className="">
               {/* head */}
               <thead>
                 <tr>
-                  <p className="text-lg text-teal-500 font-semibold">Sports</p>
+                  <td className="text-lg text-teal-500 font-semibold">Sports</td>
                 </tr>
               </thead>
               <tbody>
                 {/* row 1 */}
                 {sports.map((sport) => (
-                  <tr key={sport}>{sport}</tr>
+                  <tr key={sport}><td>{sport}</td></tr>
                 ))}
               </tbody>
             </table>
@@ -60,9 +63,9 @@ const CollegeCard = ({ college }) => {
           <p>{research_history.slice(0, 95)}...</p>
         </div>
         <div className="card-actions justify-center">
-          <button className="btn btn-xs sm:btn-sm md:btn-md bg-teal-500 text-white hover:bg-[#072F60]">
+          <Link to={`/colleges/${_id}`}><button className="btn btn-xs sm:btn-sm md:btn-md bg-teal-500 text-white hover:bg-[#072F60]">
             View Details
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>
