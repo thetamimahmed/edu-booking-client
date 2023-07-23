@@ -32,7 +32,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <span className="mr-2 text-lg font-medium hover:text-teal-500"><Link to="/">Login </Link></span> / <span className="ml-2 text-lg font-medium hover:text-teal-500"><Link to="/"> Register</Link></span>
+                <span className="mr-2 text-lg font-medium hover:text-teal-500"><Link to="/login">Login </Link></span> / <span className="ml-2 text-lg font-medium hover:text-teal-500"><Link to="/signup"> Register</Link></span>
             </div> 
         </div>
     );
