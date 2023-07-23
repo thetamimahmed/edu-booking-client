@@ -14,7 +14,7 @@ const NavBar = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="text-lg font-medium hover:text-teal-500">
-        <Link to="/">Colleges</Link>
+        <Link to="/colleges">Colleges</Link>
       </li>
       <li className="text-lg font-medium hover:text-teal-500">
         <Link to="/">My College</Link>
