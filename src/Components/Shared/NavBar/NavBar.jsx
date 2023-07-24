@@ -17,10 +17,10 @@ const NavBar = () => {
         <Link to="/colleges">Colleges</Link>
       </li>
       <li className="text-lg font-medium hover:text-teal-500">
-        <Link to="/">My College</Link>
+        <Link to="/my-college">My College</Link>
       </li>
       <li className="text-lg font-medium hover:text-teal-500">
-        <Link to="/">Admission</Link>
+        <Link to="/admission">Admission</Link>
       </li>
     </>
   );
