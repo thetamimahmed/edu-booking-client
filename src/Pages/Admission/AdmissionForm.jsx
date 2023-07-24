@@ -37,7 +37,7 @@ const AdmissionForm = () => {
         const imageUrl = imageData.data.display_url;
         const admissionDetail = {name, email, university, subject, number, address, birth, imageUrl, userMail: user.email}
         console.log(admissionDetail)
-        fetch('http://localhost:5000/admissions', {
+        fetch('https://edu-booking-server-blue.vercel.app/admissions', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify(admissionDetail)

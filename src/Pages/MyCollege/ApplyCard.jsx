@@ -10,10 +10,9 @@ const ApplyCard = ({ admission }) => {
     address,
     birth,
     imageUrl,
-    userMail,
   } = admission;
   return (
-    <div className="card card-compact mb-10 bg-teal-50 relative lg:shadow-xl">
+    <div className="card card-compact mb-14 bg-teal-50 relative lg:shadow-lg">
       <div className="avatar absolute -top-10 left-[37%] md:left-[41.7%]">
         <div className="w-24 rounded-full ring ring-teal-500 ring-offset-base-100 ring-offset-2">
           <img src={imageUrl} />

@@ -1,4 +1,5 @@
 import CollegeSection from "./CollegeSection";
+import Gallery from "./Gallery";
 import Header from "./Header";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
         <Header></Header>
         <CollegeSection></CollegeSection>
+        <Gallery></Gallery>
     </div>
   );
 };

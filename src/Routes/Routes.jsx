@@ -4,6 +4,7 @@ import Admission from "../Pages/Admission/Admission";
 import AdmissionForm from "../Pages/Admission/AdmissionForm";
 import AllCollege from "../Pages/AllCollege/AllCollege";
 import Colleges from "../Pages/Colleges/Colleges";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyCollege from "../Pages/MyCollege/MyCollege";
@@ -14,36 +15,36 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/colleges"),
+        loader: () => fetch("https://edu-booking-server-blue.vercel.app/colleges"),
       },
       {
         path: "colleges/:id",
         element: <PrivateRoute><Colleges></Colleges></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/colleges/${params.id}`)
+        loader: ({params})=> fetch(`https://edu-booking-server-blue.vercel.app/colleges/${params.id}`)
       },
       {
         path: "/colleges",
         element: <AllCollege></AllCollege>,
-        loader: () => fetch("http://localhost:5000/colleges"),
+        loader: () => fetch("https://edu-booking-server-blue.vercel.app/colleges"),
       },
       {
         path: "/admission",
         element: <Admission></Admission>,
-        loader: () => fetch("http://localhost:5000/colleges"),
+        loader: () => fetch("https://edu-booking-server-blue.vercel.app/colleges"),
       },
       {
         path:"/admission/:id",
         element: <AdmissionForm></AdmissionForm>,
-        loader: ({params})=> fetch(`http://localhost:5000/colleges/${params.id}`)
+        loader: ({params})=> fetch(`https://edu-booking-server-blue.vercel.app/colleges/${params.id}`)
       },
       {
         path: "/my-college",
-        element: <MyCollege></MyCollege>, 
-        loader: () => fetch("http://localhost:5000/admissions"),
+        element: <PrivateRoute><MyCollege></MyCollege></PrivateRoute>, 
       },
     ],
   },

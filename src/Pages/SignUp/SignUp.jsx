@@ -68,6 +68,7 @@ const SignUp = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Login Successfully");
+        navigate(from, {replace:true})
       })
       .catch((err) => {
         setLoading(false);
